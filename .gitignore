@@ -13,6 +13,11 @@ dist
 dist-ssr
 coverage
 *.local
+node_modules/
+$RECYCLE.BIN/
+package-lock.json
+yarn.lock
+
 
 /cypress/videos/
 /cypress/screenshots/
