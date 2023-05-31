@@ -11,7 +11,7 @@ export default defineConfig({
       template: {
         compilerOptions: {
           // treat all tags with a dash as custom elements
-          isCustomElement: (tag) => tag.includes('-')
+          isCustomElement: (tag) => tag.startsWith('uds-')
         }
       }
     }),
@@ -21,5 +21,8 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
+  },
+  optimizeDeps: {
+    exclude: ['@thecopceski/vue-library']
   }
 })

@@ -1,6 +1,10 @@
 <script setup lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+
+function myLogFn(event: any) {
+  console.log(event)
+}
 </script>
 
 <template>
@@ -8,7 +12,8 @@ import HelloWorld from './components/HelloWorld.vue'
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <uds-button text="TESTE"></uds-button>
+      <uds-button text="Unify Button" icon="shapes" @udsclick="myLogFn"></uds-button>
+      <uds-input label="Unify Input" @udschange="myLogFn"></uds-input>
       <HelloWorld msg="You did it!" />
 
       <nav>
